@@ -1,0 +1,15 @@
+@import './layout/color.scss';
+@import './layout/footer.scss';
+@import './layout/home.scss';
+@import './layout/navBar.scss';
+
+.container{
+    display: flex;
+    height : 100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    padding: 30px;
+}
