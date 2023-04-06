@@ -1,0 +1,54 @@
+@import "/src/app/layout/color.scss";
+//Main container
+.container-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px $black;
+  padding: 50px;
+  //Sign in heading design
+  .signin-div {
+    font-size: xx-large;
+    margin: 8px 0;
+    //Logo image
+    img{
+        height: 4rem;
+    }
+  }
+  //Input field design
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid $inp-color;
+    box-sizing: border-box;
+  }
+  //Warning message
+  .warning{
+    color:$warning;
+    margin-bottom: 20px;
+  }
+  //sign up button
+  button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: $white;
+    background-color: $orange;
+    border-style: none;
+    border-radius: 2px;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+}
+//Media querry add for responsive 
+@media (max-width: 680px) {
+  .container-form{
+    width: 300px;
+  }
+}
