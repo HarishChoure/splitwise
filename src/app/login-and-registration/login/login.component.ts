@@ -15,8 +15,7 @@ export class LoginComponent {
       user_psw: new FormControl('',Validators.required),
     })
   }
-  onLogin(){
-  }
+  //By this function user can navigate to dashboard
   navigateDashboard(){
     this.router.navigateByUrl('dashboard')
   }

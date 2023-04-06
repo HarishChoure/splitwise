@@ -2,7 +2,7 @@
   
   <div class="container-form">
     <div class="login-div">Log in</div>
-      <form [formGroup]="loginForm"  (ngSubmit)="onLogin();navigateDashboard()">
+      <form [formGroup]="loginForm"  (ngSubmit)="navigateDashboard()">
         <div>
           <label for="uname">Email address</label>
           <input type="text" placeholder="Enter Username" formControlName="user_email"required>
