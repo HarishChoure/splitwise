@@ -1,19 +1,22 @@
-
-  
-  <div class="container-form">
-    <div class="login-div">Log in</div>
-      <form [formGroup]="loginForm"  (ngSubmit)="navigateDashboard()">
-        <div>
-          <label for="uname">Email address</label>
-          <input type="text" placeholder="Enter Username" formControlName="user_email"required>
+<!-- Log in form container -->
+<div class="container-form">
+  <div class="login-div">Log in</div>
+    <form [formGroup]="loginForm"  (ngSubmit)="navigateDashboard()">
+      <!-- Email address and password container -->
+       <div>
+        <!-- Email address container -->
+          <label for="email" class="label-design">Email Address</label>
+          <input type="email" placeholder="Enter Email Address" formControlName="user_email" id="eamil" required>
           <div *ngIf="loginForm.get('user_email')?.invalid && loginForm.get('user_email')?.touched" class="warning">
-            Email Address is required
+            Email address is required
           </div>
+          <!-- Password conatiner -->
           <label for="psw">Password</label>
-          <input type="password" placeholder="Enter Password" formControlName="user_psw" required>
+          <input type="password" placeholder="Enter Password" formControlName="user_psw" id="psw" required>
           <div *ngIf="loginForm.get('user_psw')?.invalid && loginForm.get('user_psw')?.touched" class="warning">
             Password is required
           </div>
+          <!-- Button container -->
           <button [disabled]="loginForm.invalid"type="submit">Login</button>
         </div>
       </form>

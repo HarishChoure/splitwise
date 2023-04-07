@@ -7,8 +7,8 @@ import { FriendListComponent } from './friend-list/friend-list.component';
 import { RouterModule,Routes } from '@angular/router';
 
 const friendsRoutes : Routes = [
-  {path:'fList', component :FriendListComponent},
-  {path:'fAddEdit', component :AddEditFriendsComponent}
+  {path:'friend-list', component :FriendListComponent},
+  {path:'friend-add-edit', component :AddEditFriendsComponent}
 ]
 @NgModule({
   declarations: [
