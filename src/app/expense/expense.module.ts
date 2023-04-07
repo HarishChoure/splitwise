@@ -6,8 +6,8 @@ import { ExpenseListComponent } from './expense-list/expense-list.component';
 import { RouterModule,Routes } from '@angular/router';
 
 const expenseRoutes : Routes = [
-  {path:'eList', component :ExpenseListComponent},
-  {path:'eAddEdit', component :AddEditExpenseComponent}
+  {path:'expense-list', component :ExpenseListComponent},
+  {path:'expense-add-edit', component :AddEditExpenseComponent}
 ]
 
 @NgModule({
