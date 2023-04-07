@@ -1,54 +1,79 @@
 @import "/src/app/layout/color.scss";
-//Main container
+//Signin form container design
 .container-form {
   width: 500px;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   box-shadow: 0px 4px 8px $black;
-  padding: 50px;
-  //Sign in heading design
+  padding: 20px 50px;
+  overflow-x: hidden;
+  //Signin div design
   .signin-div {
     font-size: xx-large;
-    margin: 8px 0;
-    //Logo image
-    img{
-        height: 4rem;
-    }
+    margin-bottom:20px;
   }
   //Input field design
-  input[type="text"],
   input[type="email"],
+  input[type="text"],
   input[type="password"] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 20px 0 10px 0;
     display: inline-block;
-    border: 1px solid $inp-color;
+    border: 1px solid $light-gray;
     box-sizing: border-box;
   }
-  //Warning message
-  .warning{
-    color:$warning;
-    margin-bottom: 20px;
+  //Warning message design
+  .warning {
+    color: $warning;
+    margin-bottom: 10px;
   }
-  //sign up button
+  // Signin button design
   button {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     color: $white;
-    background-color: $orange;
+    background-color: $green;
     border-style: none;
     border-radius: 2px;
+    cursor: pointer;
   }
   button:hover {
     opacity: 0.8;
   }
 }
-//Media querry add for responsive 
-@media (max-width: 680px) {
-  .container-form{
-    width: 300px;
+//For tablet mode
+@media only screen and (max-width: 768px) {
+  .container-form {
+    width:300px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 4px 0;
+  }
+}
+//For mobile mode
+@media only screen and (max-width: 480px) {
+  .container-form {
+    width :200px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    margin: 5px 0;
+    padding: 10px 15px;
+  }
+
+  button {
+    margin: 2px 0;
+    padding: 10px 15px;
+    font-size: 14px;
   }
 }

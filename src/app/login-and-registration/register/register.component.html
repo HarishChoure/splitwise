@@ -1,27 +1,27 @@
 <div class="container-form">
     <!-- Form Div -->
-    <div class="signin-div"><img src="../../../assets/splitwiseLogo-sign.png" alt="splitwiseLogo">INTRODUCE YOURSELF</div>
+    <div class="signin-div">Sign in</div>
       <form [formGroup]="registerForm"  (ngSubmit)="navigateDashboard()">
         <div>
-          <!-- Name -->
+          <!-- Name container -->
           <label for="uname">Name </label>
-          <input type="text" placeholder="Enter Username" formControlName="user_name" id="uname" required>
+          <input type="text" placeholder="Enter Name" formControlName="user_name" id="uname" required>
           <div *ngIf="registerForm.get('user_name')?.invalid && registerForm.get('user_name')?.touched" class="warning">
             Name is required
           </div>
-          <!-- Email field -->
+          <!-- Email address container-->
           <label for="email">Email address</label>
-          <input type="email" placeholder="Enter your email address" formControlName="user_email" id="email" required>
+          <input type="email" placeholder="Enter Email Address" formControlName="user_email" id="email" required>
           <div *ngIf="registerForm.get('user_email')?.invalid && registerForm.get('user_email')?.touched" class="warning">
             Email Address is required
           </div>
-          <!-- Password -->
+          <!-- Password container -->
           <label for="psw">Password</label>
           <input type="password" placeholder="Enter Password" formControlName="user_psw" id="psw" required>
           <div *ngIf="registerForm.get('user_psw')?.invalid && registerForm.get('user_psw')?.touched" class="warning">
             Password is required
           </div>
-          <!-- Button -->
+          <!-- Button container -->
           <button [disabled]="registerForm.invalid"type="submit">Sign me up!</button>
         </div>
       </form>

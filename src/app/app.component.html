@@ -1,42 +1,22 @@
-
+<!-- Home component -->
 <div class="home-container">
+  <!-- Header Component -->
   <header>
     <div class="nav-header">
       <img class="nav-img" src="../assets/splitwiseLogo.jfif" />
       <div class="log-sign">
-        <div class="nav-log" (click)="navigateLogin()">Login</div>
+        <div class="nav-log" (click)="navigateLogin()">
+          <button>Login</button></div>
         <div class="nav-signUP" (click)="navigateSignup()">
           <button>Sign up</button>
         </div>
       </div>
     </div>
   </header>
+  <!-- Main Component -->
   <main>
     <div class="container">
       <router-outlet></router-outlet>
     </div>
   </main>
-  <footer class="footer-container">
-    <div class="footer-box">
-      <p>Splitwise</p>
-      <ul>
-        <li routerLink="page-not-found">About</li>
-        <li routerLink="page-not-found">Blog</li>
-      </ul>
-    </div>
-    <div class="footer-box">
-      <p>Account</p>
-      <ul>
-        <li (click)="navigateLogin()">Log in</li>
-        <li (click)="navigateSignup()">Sign up</li>
-      </ul>
-    </div>
-    <div class="footer-box">
-      <p>More</p>
-      <ul>
-        <li routerLink="page-not-found">Contact us</li>
-        <li routerLink="page-not-found">FAQ</li>
-      </ul>
-    </div>
-  </footer>
 </div>
