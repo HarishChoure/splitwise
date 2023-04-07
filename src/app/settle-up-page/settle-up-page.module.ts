@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SettleUpPageComponent } from './settle-up-page/settle-up-page.component';
+import { SettleUpPageComponent } from './settle-up-page.component'; 
+import { RouterModule,Routes } from '@angular/router';
 
-
-
+const settleRoutes : Routes = [
+  {path:'settle', component :SettleUpPageComponent},
+ 
+]
 @NgModule({
   declarations: [
     SettleUpPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(settleRoutes)
   ]
 })
 export class SettleUpPageModule { }

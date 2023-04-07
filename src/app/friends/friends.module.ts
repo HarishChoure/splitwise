@@ -4,14 +4,20 @@ import { AddEditFriendsComponent } from './add-edit-friends/add-edit-friends.com
 import { FriendListComponent } from './friend-list/friend-list.component';
 
 
+import { RouterModule,Routes } from '@angular/router';
 
+const friendsRoutes : Routes = [
+  {path:'friend-list', component :FriendListComponent},
+  {path:'friend-add-edit', component :AddEditFriendsComponent}
+]
 @NgModule({
   declarations: [
     AddEditFriendsComponent,
     FriendListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(friendsRoutes)
   ]
 })
 export class FriendsModule { }

@@ -1,0 +1,77 @@
+@import "/src/app/layout/color.scss";
+//Login form container design
+.container-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px $black;
+  padding: 20px 50px;
+  overflow-x: hidden;
+  //Login div design
+  .login-div {
+    font-size: xx-large;
+    margin-bottom:20px;
+  }
+  //Input field design
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0 10px 0;
+    display: inline-block;
+    border: 1px solid $light-gray;
+    box-sizing: border-box;
+  }
+  //Warning message design
+  .warning {
+    color: $warning;
+    margin-bottom: 10px;
+  }
+  // Login button design
+  button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: $white;
+    background-color: $green;
+    border-style: none;
+    border-radius: 2px;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+}
+//For tablet mode
+@media only screen and (max-width: 768px) {
+  .container-form {
+    width:300px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 4px 0;
+  }
+}
+//For mobile mode
+@media only screen and (max-width: 480px) {
+  .container-form {
+    width :200px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    margin: 5px 0;
+    padding: 10px 15px;
+  }
+
+  button {
+    margin: 2px 0;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}

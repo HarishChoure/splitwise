@@ -3,15 +3,20 @@ import { CommonModule } from '@angular/common';
 import { GroupListComponent } from './group-list/group-list.component';
 import { AddEditGroupComponent } from './add-edit-group/add-edit-group.component';
 
+import { RouterModule,Routes } from '@angular/router';
 
-
+const groupRoutes : Routes = [
+  {path:'group-list', component :GroupListComponent},
+  {path:'group-add-edit', component :AddEditGroupComponent}
+]
 @NgModule({
   declarations: [
     GroupListComponent,
     AddEditGroupComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(groupRoutes)
   ]
 })
 export class GroupModule { }
