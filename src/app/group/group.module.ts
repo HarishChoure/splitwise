@@ -6,8 +6,8 @@ import { AddEditGroupComponent } from './add-edit-group/add-edit-group.component
 import { RouterModule,Routes } from '@angular/router';
 
 const groupRoutes : Routes = [
-  {path:'gList', component :GroupListComponent},
-  {path:'gAddEdit', component :AddEditGroupComponent}
+  {path:'group-list', component :GroupListComponent},
+  {path:'group-add-edit', component :AddEditGroupComponent}
 ]
 
 @NgModule({

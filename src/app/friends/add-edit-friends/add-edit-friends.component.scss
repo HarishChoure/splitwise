@@ -1,0 +1,140 @@
+@import "/src/app/layout/color.scss";
+
+// Invite form page design
+.invite-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: $light-blue;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px $black;
+
+  // Invite form heading
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  // Input-field container design
+  .input-field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    // Label design
+    label {
+      width: 100px;
+      font-weight: bold;
+    }
+
+    // Input field design
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px;
+    }
+
+    // Text area design
+    textarea {
+      height: 100px;
+    }
+  }
+
+  // Warning message design
+  .warning-message {
+    display: flex;
+    color: $warning;
+    margin-bottom: 15px;
+    margin-left: 100px;
+  }
+
+  // Button design
+  .button-design {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    button {
+      display: block;
+      margin: 0 ;
+      padding: 10px 15px;
+      background-color: $green;
+      color: $white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: $white;
+      color: $green;
+    }
+  }
+
+  // Responsive styles for tablet
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+
+    .input-field {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 15px;
+
+      label {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 90%;
+        margin-bottom: 10px;
+      }
+    }
+
+    .warning-message {
+      margin-left: 0;
+      justify-content: center;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+
+  // Responsive styles for mobile
+  @media screen and (max-width: 480px) {
+    padding: 10px;
+
+    .input-field {
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        width: 80%;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 70%;
+        margin-bottom: 10px;
+      }
+    }
+
+    button {
+      font-size: 10px;
+      gap:5px;
+      padding: 2px;
+    }
+  }
+}
