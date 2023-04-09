@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
   constructor(private router : Router){}
-  navigateSignup(){
+  navigateInviteFriend(){
     this.router.navigateByUrl('friend/friend-add-edit')
   }
 }
