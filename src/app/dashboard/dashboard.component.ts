@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,7 +8,13 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
   constructor(private router : Router){}
-  navigateSignup(){
+  //This method used to navigate invite friend page
+  navigateInviteFriend(){
     this.router.navigateByUrl('friend/friend-add-edit')
   }
+  //This method used to navigate friend list page
+  navigateFriendList(){
+    this.router.navigateByUrl('friend/friend-list')
+  }
+  
 }

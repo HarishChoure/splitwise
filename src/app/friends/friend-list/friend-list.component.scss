@@ -1,0 +1,54 @@
+@import '/src/app/layout/color.scss';
+// Friends list heading
+.friend-listHeading{
+    display: flex;
+    justify-content: center;
+}
+//Friend lsit
+.friend-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 20px;
+  list-style: none;
+}
+//Friend list container
+.friend-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px $black;
+}
+//Button container
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+//Delete or edit button design
+.delete-btn,
+.edit-btn {
+  background-color: $green;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px; 
+  margin-right: 5px;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  background-color: $white;
+  color: $green;
+}
+

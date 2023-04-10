@@ -5,6 +5,7 @@ import { FriendListComponent } from './friend-list/friend-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { RouterModule,Routes } from '@angular/router';
+import {MatListModule} from '@angular/material/list';
 
 const friendsRoutes : Routes = [
   {path:'friend-list', component :FriendListComponent},
@@ -18,7 +19,8 @@ const friendsRoutes : Routes = [
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule.forChild(friendsRoutes)
+    RouterModule.forChild(friendsRoutes),
+    MatListModule
   ]
 })
 export class FriendsModule { }

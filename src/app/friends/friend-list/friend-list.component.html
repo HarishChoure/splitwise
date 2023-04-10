@@ -1,1 +1,14 @@
-<p>friend-list works!</p>
+<!-- Friends  list container -->
+<div class="friend-listHeading"><h2>Friend List</h2></div>
+<!-- Friends name lsit -->
+<ul class="friend-list">
+  <li *ngFor="let name of names; let i = index;">
+    <div >{{ name }}</div>
+    <div class="button-container">
+      <!-- Delete button -->
+      <button class="delete-btn" (click)="deleteName(i)"><i class="fa-solid fa-user-minus"></i></button>
+      <!-- Edit button -->
+      <button class="edit-btn" (click)="navigateEditFriend()"><i class="fa-solid fa-user-pen"></i></button>
+    </div>
+  </li>
+</ul>
