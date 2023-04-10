@@ -1,82 +1,101 @@
 @import "./color.scss";
-//Common design for button
+
+// Font sizes
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+
+// Common design for button
 @mixin button-design{
     color: $white;
-    padding: 15px;
+    padding: $font-size-medium;
     background-color: $green;
     border-radius: 5px;
     border: none;
     cursor: pointer;
 }
-//Header container design
+
+// Header container design
 .nav-header {
     display: flex;
     width: 100%;
-    height: 80px; 
+    height: 80px;
     justify-content: space-between;
     border: none;
     background-color: $light-gray;
     overflow-x: hidden;
-    //Image design
+
+    // Image design
     .nav-img {
-        margin: 10px; 
-        height: 60px; 
+        margin: $font-size-small;
+        height: 60px;
     }
+
     // Login and signup design
     .log-sign {
         display: flex;
-        gap: 20px; 
+        gap: $font-size-medium;
         align-items: center;
-        //Login design
+
+        // Login design
         .nav-log {
             color: $white;
+
             button {
                 @include button-design();
+                font-size: $font-size-small;
             }
-            
-            button:hover{
+
+            button:hover {
                 background-color: $light-gray;
                 color: $green;
             }
         }
-        //Signup design
+
+        // Signup design
         .nav-signUP {
             color: $white;
+
             button {
-                margin-right: 15px;
+                margin-right: $font-size-medium;
                 @include button-design();
+                font-size: $font-size-small;
             }
-            
-            button:hover{
+
+            button:hover {
                 background-color: $light-gray;
                 color: $green;
             }
         }
     }
 }
-//For tablet mode
+
+// For tablet mode
 @media (max-width: 767px) {
     .nav-header {
-        height: 60px; 
-        
+        height: 60px;
+
         .nav-img {
-            margin-left: 20px; 
-            height: 45px; 
+            margin-left: $font-size-medium;
+            height: 45px;
         }
     }
 }
-//For mobile mode
+
+// For mobile mode
 @media (max-width: 480px) {
     .nav-header {
-        height: 40px; 
+        height: 40px;
+
         .nav-img {
-            margin-left: 10px; 
-            height: 30px; 
+            margin-left: $font-size-small;
+            height: 30px;
         }
-    }
-    .nav-header button {
-        margin-right: 20px; 
-        padding: 10px;
-        font-size: 14px; 
+
+        button {
+            margin-right: $font-size-medium;
+            padding: $font-size-small;
+            font-size: $font-size-small;
+        }
     }
 }
