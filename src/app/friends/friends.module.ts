@@ -9,7 +9,8 @@ import {MatListModule} from '@angular/material/list';
 
 const friendsRoutes : Routes = [
   {path:'friend-list', component :FriendListComponent},
-  {path:'friend-add-edit', component :AddEditFriendsComponent}
+  {path:'friend-add', component :AddEditFriendsComponent},
+  {path:'friend-edit', component :AddEditFriendsComponent}
 ]
 @NgModule({
   declarations: [

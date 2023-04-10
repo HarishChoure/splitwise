@@ -15,7 +15,6 @@ deleteName(index: number) {
 }
 //This method are used to navigate edit-friend list
 navigateEditFriend(){
-  this.router.navigateByUrl('friend/friend-add-edit')
+  this.router.navigateByUrl('friend/friend-edit')
 }
-
 }

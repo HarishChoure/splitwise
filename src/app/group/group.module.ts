@@ -7,7 +7,8 @@ import { RouterModule,Routes } from '@angular/router';
 
 const groupRoutes : Routes = [
   {path:'group-list', component :GroupListComponent},
-  {path:'group-add-edit', component :AddEditGroupComponent}
+  {path:'group-add', component :AddEditGroupComponent},
+  {path:'group-edit', component :AddEditGroupComponent}
 ]
 
 @NgModule({
