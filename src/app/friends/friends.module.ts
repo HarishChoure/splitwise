@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AddEditFriendsComponent } from './add-edit-friends/add-edit-friends.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
 
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule,Routes } from '@angular/router';
 
 const friendsRoutes : Routes = [
@@ -17,7 +17,8 @@ const friendsRoutes : Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(friendsRoutes)
+    RouterModule.forChild(friendsRoutes),
+    ReactiveFormsModule
   ]
 })
 export class FriendsModule { }
