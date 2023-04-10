@@ -16,5 +16,8 @@ export class DashboardComponent {
   navigateFriendList(){
     this.router.navigateByUrl('friend/friend-list')
   }
+  navigateCreateGroup(){
+    this.router.navigateByUrl('group/group-add')
+  }
  
 }
