@@ -16,6 +16,7 @@ export class DashboardComponent {
   navigateFriendList(){
     this.router.navigateByUrl('friend/friend-list')
   }
+  //This method used to navigate to create group page
   navigateCreateGroup(){
     this.router.navigateByUrl('group/group-add')
   }
