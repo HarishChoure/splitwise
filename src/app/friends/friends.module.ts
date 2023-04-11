@@ -4,12 +4,13 @@ import { AddEditFriendsComponent } from './add-edit-friends/add-edit-friends.com
 import { FriendListComponent } from './friend-list/friend-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 import { RouterModule,Routes } from '@angular/router';
+
 
 const friendsRoutes : Routes = [
   {path:'friend-list', component :FriendListComponent},
-  {path:'friend-add-edit', component :AddEditFriendsComponent}
+  {path:'friend-add', component :AddEditFriendsComponent},
+  {path:'friend-edit', component :AddEditFriendsComponent}
 ]
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ const friendsRoutes : Routes = [
     CommonModule,
     RouterModule.forChild(friendsRoutes),
     ReactiveFormsModule
+
   ]
 })
 export class FriendsModule { }
