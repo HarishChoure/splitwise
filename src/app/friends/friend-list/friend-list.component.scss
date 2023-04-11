@@ -1,0 +1,83 @@
+@import '/src/app/layout/color.scss';
+
+/* Friends list heading */
+.friend-listHeading {
+    display: flex;
+    justify-content: center;
+}
+
+/* Padding classes */
+.p10 {
+    padding: 10px;
+}
+
+/* Margin classes */
+.m10 {
+    margin: 10px;
+}
+
+/* Friend list */
+.friend-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    border-radius: 10px;
+    list-style: none;
+}
+
+/* Friend list container */
+.friend-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px $black;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Delete or edit button design */
+.delete-btn,
+.edit-btn {
+    background-color: $green;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 5px;
+    padding: 10px;
+} 
+/* Mobile styles */
+@media only screen and (max-width: 480px) {
+  /* Padding classes */
+  .p10 {
+    padding: 5px;
+  }
+
+  /* Margin classes */
+  .m10 {
+    margin: 5px;
+  }
+
+  /* Friend list */
+  .friend-list {
+    border-radius: 0;
+  }
+
+  /* Friend list container */
+  .friend-list li {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+}
+
+

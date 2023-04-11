@@ -1,0 +1,148 @@
+@import '/src/app/layout/color.scss';
+
+//Common button design 
+@mixin button-design{
+    background-color: $green;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    padding: $form-padding;
+    margin-right: $form-padding;
+    cursor: pointer;
+}
+
+$form-padding: 10px;
+
+//Form container design
+.form-container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px $black;
+    padding: 20px 50px;
+    overflow-x: hidden;
+
+    p{
+        font-size: xx-large;
+        margin-bottom: 10px;
+    }
+}
+
+//Form group design
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $form-padding;
+
+    //Label design 
+    label {
+        font-size: large;
+        margin-bottom: $form-padding;
+    }
+
+    //Input field design 
+    input,
+    select {
+        padding: $form-padding;
+        border-radius: 5px;
+        border: 1px solid $light-gray;
+    }
+}
+
+//Form row design 
+.form-row {
+    display: flex;
+    flex-direction: row;
+
+    //Form group design
+    .form-group {
+        flex: 1;
+        margin-right: $form-padding;
+    }
+
+    //Delete button design 
+    .delete-btn {
+        background-color: $white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+
+//Settle up container design 
+.settle-up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: $form-padding;
+
+    label {
+        font-size: large;
+        margin-right: $form-padding;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: $form-padding;
+        border-radius: 5px;
+        border: 1px solid $light-gray;
+        cursor: pointer;
+
+        &:checked {
+            background-color: $green;
+        }
+    }
+}
+
+//Add button design 
+.add-btn{
+    @include button-design;
+}
+
+//Save button design
+.save-btn{
+    @include button-design;
+    background-color: $green;
+}
+
+//Save, add, delete hover design
+.add-btn:hover,
+.save-btn:hover,
+.delete-btn:hover {
+    background-color: $white;
+    color: $green;
+    opacity: 0.8;
+}
+
+/* hide the delete button for the first member */
+.form-row:first-of-type .delete-btn {
+    visibility: hidden;
+}
+
+//Responsive for table and mobile mode both
+@media only screen and (max-width: 768px) {
+    .form-container{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-row{
+        flex-direction: column;
+
+        .form-group {
+            margin-right: 0;
+            margin-bottom: $form-padding;
+        }
+    }
+
+    .add-btn,
+    .save-btn,
+    .delete-btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: $form-padding;
+    }
+}

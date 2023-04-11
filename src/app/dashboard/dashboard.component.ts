@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,8 +8,17 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
   constructor(private router : Router){}
-  //This function is used to navigate the user to friend invite form page
+  //This method used to navigate invite friend page
   navigateInviteFriend(){
-    this.router.navigateByUrl('friend/friend-add-edit')
+    this.router.navigateByUrl('friend/friend-add')
   }
+  //This method used to navigate friend list page
+  navigateFriendList(){
+    this.router.navigateByUrl('friend/friend-list')
+  }
+  //This method used to navigate to create group page
+  navigateCreateGroup(){
+    this.router.navigateByUrl('group/group-add')
+  }
+ 
 }

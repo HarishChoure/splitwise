@@ -1,1 +1,45 @@
-<p>add-edit-group works!</p>
+<!-- Form container -->
+<div class="form-container">
+  <p>Create Group</p>
+  <form [formGroup]="groupForm" (ngSubmit)="navigateToDashboard()">
+      <div class="form-group">
+          <label for="groupName">Group Name</label>
+          <input type="text" id="groupName" formControlName="groupName" required>
+      </div>    
+       <!--Group type select container  -->
+      <div class="form-group">
+          <label for="groupType">Group Type</label>
+          <select id="groupType" formControlName="groupType" required>
+              <option value="">Home</option>
+              <option value="Trip">Trip</option>
+              <option value="Couple">Couple</option>
+              <option value="Other">Other</option>
+          </select>
+      </div>   
+      <!-- Add member container -->
+      <div formArrayName="members">
+          <div *ngFor="let member of members.controls; let i = index" class="form-row">
+              <div class="form-group">
+                  <label for="memberName{{i}}">Member Name</label>
+                  <input type="text" id="memberName{{i}}" formControlName="memberName{{i}}" required>
+              </div>  
+              <div class="form-group">
+                  <label for="memberEmail{{i}}">Member Email</label>
+                  <input type="email" id="memberEmail{{i}}" formControlName="memberEmail{{i}}" required>
+              </div>    
+              <button type="button" class="delete-btn p5" (click)="deleteMember(i)">
+                  <i class="fa-solid fa-user-xmark"></i>
+              </button>
+          </div>
+      </div>  
+      <!-- Settle Up Payment checkbox -->
+      <div class="settle-up">
+          <label for="settleUpPayment">Settle Up Payment</label>
+          <input type="checkbox" id="settleUpPayment" formControlName="settleUpPayment">
+      </div>
+      <!-- Add member button -->
+      <button type="button" class="add-btn" (click)="addMember()">Add Member</button>   
+      <!-- Save group button  -->
+      <button type="submit" class="save-btn" (click)="save()">Save</button>
+  </form>
+</div>
