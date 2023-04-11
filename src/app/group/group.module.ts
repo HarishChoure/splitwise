@@ -9,7 +9,6 @@ const groupRoutes : Routes = [
   {path:'group-list', component :GroupListComponent},
   {path:'group-add-edit', component :AddEditGroupComponent}
 ]
-
 @NgModule({
   declarations: [
     GroupListComponent,
