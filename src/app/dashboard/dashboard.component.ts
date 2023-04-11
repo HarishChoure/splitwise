@@ -8,6 +8,12 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
   constructor(private router : Router){}
+
+  //Demo data
+  total_balance:number = 5000;
+  you_owe:number = 2000;
+  your_owe : number = 400;
+
   //This method used to navigate invite friend page
   navigateInviteFriend(){
     this.router.navigateByUrl('friend/friend-add')
@@ -24,5 +30,16 @@ export class DashboardComponent {
   navigateGroupList(){
     this.router.navigateByUrl('group/group-list')
   }
- 
+  //This method used to navigate dashboard
+  navigateDashboard(){
+    this.router.navigateByUrl('dashboard')
+  }
+  navigateSettleup(){
+    this.router.navigateByUrl('settle')
+  }
+  //navigate
+  navigateExpense(){
+    this.router.navigateByUrl('expense/expense-add')
+  }
+
 }

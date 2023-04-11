@@ -1,6 +1,34 @@
-<p>dashboard works!</p>
-<button (click)="navigateInviteFriend()">Invite Friend</button>
-<button (click)="navigateFriendList()">Friend List</button>
-<button (click)="navigateCreateGroup()">Create group</button>
-<button (click)="navigateGroupList()">Group List</button>
-
+<div class="dashboard-container">
+    <div class="header-container">
+      <div class="menu-container">
+        <ul>
+          <li class = "button-design"><button  (click)="navigateDashboard()"  >Dashboard</button></li>
+          <li class = "button-design"><button (click)="navigateInviteFriend()">Invite Friend</button></li>
+          <li class = "button-design"><button (click)="navigateFriendList()">Friend List</button></li>
+          <li class = "button-design"><button (click)="navigateCreateGroup()">Create group</button></li>
+          <li class = "button-design"><button (click)="navigateGroupList()">Group List</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="balance-container">
+      <div class="balance-item">
+        <div class="balance-label">Total Balance</div>
+        <div class="balance-amount">$1{{total_balance}}</div>
+      </div>
+      <div class="balance-item">
+        <div class="balance-label">You Owe</div>
+        <div class="balance-amount">${{you_owe}}</div>
+      </div>
+      <div class="balance-item">
+        <div class="balance-label">You Are Owed</div>
+        <div class="balance-amount">${{your_owe}}</div>
+      </div>
+      <button class="settle-up-button"  (click)="navigateSettleup()">Settle Up</button>
+    </div>
+    <div class="expenses-container">
+      <div class="expenses-header">
+        <h2>Expenses</h2>
+        <button class="add-expense-button"(click)="navigateExpense()">Add Expense</button>
+      </div>
+  </div>
+  

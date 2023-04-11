@@ -1,0 +1,142 @@
+@import '/src/app/layout/color.scss';
+
+.dashboard-container {
+    font-family: Arial, sans-serif;
+  
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+  
+      .logo-container {
+        img {
+          width: 80px;
+        }
+      }
+  
+      .menu-container {
+        ul {
+          display: flex;
+          list-style-type: none;
+  
+          li {
+            margin-right: 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #888;
+  
+            &:hover {
+              color: #333;
+              cursor: pointer;
+            } 
+          }      
+        }
+      }
+    }
+    .button-design {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    
+        button {
+          display: block;
+          margin: 0 ;
+          padding: 10px 15px;
+          background-color: $green;
+          color: $white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    
+        button:hover {
+          background-color: $white;
+          color: $green;
+        }
+      }
+    .balance-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+      padding: 2rem;
+  
+      .balance-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2rem;
+  
+        .balance-label {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+  
+        .balance-amount {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #333;
+        }
+  
+        &:not(:last-child) {
+          border-right: 1px solid #ccc;
+          padding-right: 2rem;
+          margin-right: 2rem;
+        }
+      }
+  
+      .settle-up-button {
+        background-color: #0070c9;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 0.8rem 2rem;
+        border-radius: 4px;
+        border: none;
+        transition: background-color 0.2s ease-in-out;
+  
+        &:hover {
+          background-color: #005aaa;
+        }
+      }
+    }
+  
+    .expenses-container {
+      margin-top: 3rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+  
+      .expenses-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        h2 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin: 0;
+        }
+  
+        .add-expense-button {
+          background-color: #0070c9;
+          color: #fff;
+          font-size: 1.2rem;
+          font-weight: bold;
+          padding: 0.8rem 2rem;
+          border-radius: 4px;
+          border: none;
+          transition: background-color 0.2s ease-in-out;
+  
+          &:hover {
+            background-color: #005aaa;
+          }
+        }
+      }
+  } 
+}
+       
+
