@@ -16,5 +16,4 @@ export class DashboardComponent {
   navigateFriendList(){
     this.router.navigateByUrl('friend/friend-list')
   }
- 
 }
