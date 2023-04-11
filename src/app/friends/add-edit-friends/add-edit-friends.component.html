@@ -1,34 +1,34 @@
 <!-- Invite friend form design -->
 <div class="invite-form">
-    <!-- Invite form heading -->
-    <h2>Invite Friend</h2>
-    <!-- Invite form container -->
-    <form [formGroup]="inviteForm" (ngSubmit)="navigateDashboard()">
-        <!-- Invite friend name -->
-      <div class="input-field">
-        <label for="uname">Name:</label>
-        <input type="text" placeholder="Enter Name" formControlName="invite_name" id="uname" required>
-      </div>
-      <div class="warning-message" *ngIf="inviteForm.get('invite_name')?.invalid && inviteForm.get('invite_name')?.touched">
-        Name is required
-      </div>
-      <!-- Invite friend email -->
-      <div class="input-field">
-        <label for="email">Email:</label>
-        <input type="email" placeholder="Enter Email Address" formControlName="invite_email" id="eamil" required>
-      </div>
-      <div class="warning-message" *ngIf="inviteForm.get('invite_email')?.invalid && inviteForm.get('invite_email')?.touched">
-        Email address is required
-      </div>
-      <!-- Invite friend textarea-->
-      <div class="input-field">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" formGroupName="discription" placeholder="Discription"></textarea>
-      </div>
-      <!-- Invite friend button -->
-      <div class="button-design">
-       <div> <button [disabled]="inviteForm.invalid"type="submit">Send Invite</button></div>
-        <div><button type="submit">Cancel Invite</button></div>
-      </div>
-    </form>
-  </div>
+  <!-- Invite form heading -->
+  <h2>Invite Friend</h2>
+  <!-- Invite form container -->
+  <form [formGroup]="inviteForm" (ngSubmit)="navigateDashboard()">
+      <!-- Invite friend name -->
+    <div class="input-field">
+      <label for="uname">Name:</label>
+      <input type="text" placeholder="Enter Name" formControlName="invite_name" id="uname" required>
+    </div>
+    <div class="warning-message" *ngIf="inviteForm.get('invite_name')?.invalid && inviteForm.get('invite_name')?.touched">
+      Name is required
+    </div>
+    <!-- Invite friend email -->
+    <div class="input-field">
+      <label for="email">Email:</label>
+      <input type="email" placeholder="Enter Email Address" formControlName="invite_email" id="eamil" required>
+    </div>
+    <div class="warning-message" *ngIf="inviteForm.get('invite_email')?.invalid && inviteForm.get('invite_email')?.touched">
+      Email address is required
+    </div>
+    <!-- Invite friend textarea-->
+    <div class="input-field">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" formGroupName="discription" placeholder="Discription"></textarea>
+    </div>
+    <!-- Invite friend button -->
+    <div class="button-design">
+      <button [disabled]="inviteForm.invalid"type="submit">Send Invite</button>
+      <button type="submit">Cancel Invite</button>
+    </div>
+  </form>
+</div>
