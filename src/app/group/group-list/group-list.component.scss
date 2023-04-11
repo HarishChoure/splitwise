@@ -1,0 +1,204 @@
+@import '/src/app/layout/color.scss';
+
+/*Group list heading */
+.group-listHeading {
+    display: flex;
+    justify-content: center;
+}
+
+/* Padding classes */
+.p10 {
+    padding: 10px;
+}
+
+/* Margin classes */
+.m10 {
+    margin: 10px;
+}
+
+/* Group list */
+.group-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    border-radius: 10px;
+    list-style: none;
+}
+
+/* Group list container */
+.group-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px $black;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Delete or group-details button design */
+.delete-btn,
+.grp-detail-btn {
+    background-color: $green;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 5px;
+    padding: 10px;
+} 
+
+
+
+//Group details container design
+.group-detail {
+  width: 100%;
+//Group detail
+  .group-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color:$light-gray;
+    border-bottom: 1px solid $light-gray;
+    //Group name design
+    .group-name {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      color: $black;
+    }
+    //Cancel button design
+    .cancel-btn {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: $red;
+      color: $white;
+      cursor: pointer;
+      border-radius: 5px;
+      
+      &:hover {
+        background-color: $red;
+      }
+    }
+  }
+  
+  .upper-table {
+    padding: 1rem;
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      
+      th, td {
+        padding: 0.5rem;
+        border: 1px solid $light-black;
+      }
+      
+      th {
+        background-color: $light-gray;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+//For group list
+/* Mobile styles */
+@media only screen and (max-width: 480px) {
+
+  .p10 {
+    padding: 5px;
+  }
+
+ 
+  .m10 {
+    margin: 5px;
+  }
+
+
+  .group-list {
+    border-radius: 0;
+  }
+
+
+  .group-list li {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .group-detail {
+    .group-heading {
+      padding: 0.5rem;
+      
+      .group-name {
+        font-size: 1.5rem;
+      }
+      
+      .cancel-btn {
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+      }
+    }
+    
+    .upper-table {
+      padding: 0.5rem;
+      
+      table {
+        th, td {
+          padding: 0.3rem;
+        }
+        
+        th {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/* For tablets */
+@media only screen and (max-width: 768px) {
+  .group-detail {
+    .header {
+      padding: 0.8rem;
+      
+      .group-name {
+        font-size: 1.8rem;
+      }
+      
+      .cancel-btn {
+        font-size: 1.1rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+    
+    .upper-table {
+      padding: 0.8rem;
+      
+      table {
+        th, td {
+          padding: 0.4rem;
+        }
+        
+        th {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
