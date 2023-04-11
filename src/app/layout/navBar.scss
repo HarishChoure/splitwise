@@ -27,7 +27,7 @@ $font-size-large: 18px;
 
     // Image design
     .nav-img {
-        margin: $font-size-small;
+        margin: 10px 16px;
         height: 60px;
     }
 
@@ -57,7 +57,7 @@ $font-size-large: 18px;
             color: $white;
 
             button {
-                margin-right: $font-size-medium;
+                margin-right: 16px;
                 @include button-design();
                 font-size: $font-size-small;
             }
@@ -76,7 +76,7 @@ $font-size-large: 18px;
         height: 60px;
 
         .nav-img {
-            margin-left: $font-size-medium;
+            margin-left: 16px;
             height: 45px;
         }
     }
@@ -88,12 +88,12 @@ $font-size-large: 18px;
         height: 40px;
 
         .nav-img {
-            margin-left: $font-size-small;
+            margin-left: 14px;
             height: 30px;
         }
 
         button {
-            margin-right: $font-size-medium;
+            margin-right: 16px;
             padding: $font-size-small;
             font-size: $font-size-small;
         }

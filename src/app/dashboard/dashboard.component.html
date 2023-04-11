@@ -1,4 +1,6 @@
+<!-- Dashboard container -->
 <div class="dashboard-container">
+  <!-- Dashboar header container -->
     <div class="header-container">
       <div class="menu-container">
         <ul>
@@ -7,9 +9,11 @@
           <li class = "button-design"><button (click)="navigateFriendList()">Friend List</button></li>
           <li class = "button-design"><button (click)="navigateCreateGroup()">Create group</button></li>
           <li class = "button-design"><button (click)="navigateGroupList()">Group List</button></li>
+          <li class = "button-design"><button (click)="navigateExpenseList()">Expense List</button></li>
         </ul>
       </div>
     </div>
+    <!-- Balance container -->
     <div class="balance-container">
       <div class="balance-item">
         <div class="balance-label">Total Balance</div>
@@ -25,6 +29,7 @@
       </div>
       <button class="settle-up-button"  (click)="navigateSettleup()">Settle Up</button>
     </div>
+    <!-- Expense container -->
     <div class="expenses-container">
       <div class="expenses-header">
         <h2>Expenses</h2>

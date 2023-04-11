@@ -1,0 +1,67 @@
+//Expense form design
+.form-group {
+  margin-bottom: 20px;
+  //Expense label design
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  // Expense input field design
+  input[type='text'],
+  input[type='number'],
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+      border-color: #0077ff;
+      box-shadow: 0 0 5px rgba(0, 119, 255, 0.5);
+    }
+    &.error {
+      border-color: #ff0000;
+    }
+  }
+  //Error message design
+  .error-msg {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  //Textarea field design
+  textarea {
+    height: 100px;
+  }
+  select[multiple] {
+    height: 100px;
+  }
+  //Split option design 
+  .split-options {
+    display: flex;
+    label {
+      margin-right: 10px;
+    }
+  }
+}
+//Button design
+button[type='submit'] {
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: #005ae6;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

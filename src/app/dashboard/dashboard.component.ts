@@ -34,12 +34,18 @@ export class DashboardComponent {
   navigateDashboard(){
     this.router.navigateByUrl('dashboard')
   }
+  //Navigate to settle up page
   navigateSettleup(){
     this.router.navigateByUrl('settle')
   }
-  //navigate
+  //navigate to expense page add
   navigateExpense(){
     this.router.navigateByUrl('expense/expense-add')
   }
+  //Navigate to expense list
+  navigateExpenseList(){
+    this.router.navigateByUrl('expense/expense-list')
+  }
+
 
 }
