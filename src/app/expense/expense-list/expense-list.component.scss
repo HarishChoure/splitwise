@@ -1,49 +1,63 @@
+@import '/src/app/layout/color.scss';
+
+// Define color and font-size variables
+$font-size-medium: 16px;
+$font-size-small: 14px;
+$font-size-tiny: 12px;
 
 //Table design
 table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-  }
-  //Table heading and data design
-  th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    
-  }
-  //Table heading design
-  th {
-    background-color: #f2f2f2;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f8f8f8;
-  }
-  
-  tr:hover {
-    background-color: #e8e8e8;
-  }
-  //For table mode
-  @media only screen and (max-width: 767px) {
-   table{
-    max-width: 600px;
-    font-size: 14px;
-   }
-   th td{
-    padding: 5px;
-   }
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: $font-size-medium;
+  box-shadow: 0px 4px 8px $black;
+  padding: 20px 50px;
+  overflow-x: hidden;
 }
-//For mobile mode
-   @media only screen and (max-width: 480px) {
-   table{
-    max-width: 400px;
-    font-size: 12px;
-   }
-   th td{
-    padding: 3px;
-   }
+
+//Table heading and data design
+th, td {
+  border: 1px solid $light-black;
+  padding: 10px;
+  text-align: center;
+}
+
+//Table heading design
+th {
+  background-color: $white;
+}
+
+tr:nth-child(even) {
+  background-color: $light-black;
+}
+
+tr:hover {
+  background-color: $white;
+}
+
+//For table mode
+@media only screen and (max-width: 767px) {
+  table {
+    max-width: 600px;
+    font-size: $font-size-small;
   }
+
+  th, td {
+    padding: 5px;
+  }
+}
+
+//For mobile mode
+@media only screen and (max-width: 480px) {
+  table {
+    max-width: 400px;
+    font-size: $font-size-tiny;
+  }
+
+  th, td {
+    padding: 3px;
+  }
+}

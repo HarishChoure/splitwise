@@ -1,5 +1,7 @@
-<!-- Expense form container -->
-<form [formGroup]="expenseForm" (ngSubmit)="addExpense()" (ngSubmit)="navigateDashboard()">
+<div class ="expense-form-container">
+  <!-- Expense form container -->
+  <h2>Expense Form </h2>
+<form [formGroup]="expenseForm"  (ngSubmit)="navigateDashboard()">
   <!-- Expense name container -->
   <div class="form-group">
     <label for="name">Name</label>
@@ -17,14 +19,13 @@
     </div>
   </div>
 <!-- Expense currency container -->
-  <div class="form-group">
-    <label for="currency">Currency</label>
-    <select id="currency" formControlName="currency">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="GBP">GBP</option>
-    </select>
-  </div>
+<div *ngFor="let currency of currencies" class="form-group">
+  <label for="{{currency.value}}">{{currency.label}}</label>
+  <select id="{{currency.value}}" formControlName="{{currency.value}}">
+    <option value="{{currency.value}}">{{currency.label}}</option>
+  </select>
+</div>
+
 <!-- Expense date container -->
   <div class="form-group">
     <label for="date">Date</label>
@@ -77,3 +78,5 @@
 
   <button type="submit" [disabled]="expenseForm.invalid">Add Expense</button>
 </form>
+
+</div>

@@ -1,18 +1,16 @@
 <!-- Dashboard container -->
 <div class="dashboard-container">
   <!-- Dashboar header container -->
-    <div class="header-container">
-      <div class="menu-container">
-        <ul>
-          <li class = "button-design"><button  (click)="navigateDashboard()"  >Dashboard</button></li>
-          <li class = "button-design"><button (click)="navigateInviteFriend()">Invite Friend</button></li>
-          <li class = "button-design"><button (click)="navigateFriendList()">Friend List</button></li>
-          <li class = "button-design"><button (click)="navigateCreateGroup()">Create group</button></li>
-          <li class = "button-design"><button (click)="navigateGroupList()">Group List</button></li>
-          <li class = "button-design"><button (click)="navigateExpenseList()">Expense List</button></li>
-        </ul>
-      </div>
+  <div class="header-container">
+    <div class="menu-container">
+      <ul>
+        <li class="button-design" *ngFor="let menu of menus">
+          <button (click)="navigate(menu.route)">{{menu.name}}</button>
+        </li>
+      </ul>
     </div>
+  </div>
+  
     <!-- Balance container -->
     <div class="balance-container">
       <div class="balance-item">

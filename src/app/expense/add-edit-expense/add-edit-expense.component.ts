@@ -28,10 +28,11 @@ split: ['amount']
 });
 }
 
-addExpense() {
-// Do something with the expense form data
-console.log(this.expenseForm.value);
-}
+currencies = [
+  { value: 'USD', label: 'US Dollar' },
+  { value: 'EUR', label: 'Euro' },
+  { value: 'GBP', label: 'British Pound' },
+];
 //This function navigate to dashboard
 navigateDashboard(){
   this.router.navigateByUrl('dashboard')
