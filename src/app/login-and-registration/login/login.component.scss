@@ -17,8 +17,8 @@
   input[type="email"],
   input[type="password"] {
     width: 100%;
-    padding: 12px 20px;
-    margin: 20px 0 10px 0;
+    padding: 12px 20px 10px;
+    margin: 20px 0 10px;
     display: inline-block;
     border: 1px solid $light-gray;
     box-sizing: border-box;
@@ -31,21 +31,21 @@
   // Login button design
   button {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 20px 8px;
     margin: 8px 0;
     color: $white;
     background-color: $green;
     border-style: none;
     border-radius: 2px;
-  }
-  button:hover {
-    opacity: 0.8;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 //For tablet mode
 @media only screen and (max-width: 768px) {
   .container-form {
-    width:300px;
+    width: 300px;
   }
 
   input[type="email"],
@@ -60,7 +60,7 @@
 //For mobile mode
 @media only screen and (max-width: 480px) {
   .container-form {
-    width :200px;
+    width: 200px;
   }
 
   input[type="email"],
