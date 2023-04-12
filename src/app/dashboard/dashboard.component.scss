@@ -1,8 +1,6 @@
 @import '/src/app/layout/color.scss';
 // Font sizes
-$font-size-small: 1.2rem;
-$font-size-medium: 1.5rem;
-$font-size-large: 2rem;
+@import '/src/app/layout/variable.scss';
 //Dashboard container design
 .dashboard-container {
   font-family: Arial, sans-serif;
@@ -200,7 +198,7 @@ $font-size-large: 2rem;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      width:400px;
+      width:340px;
       .logo-container {
         margin-bottom: 1rem;
       }
@@ -208,6 +206,7 @@ $font-size-large: 2rem;
       .menu-container {
         margin-top: 1rem;
         ul {
+          justify-content:space-around;
           flex-wrap: wrap;
           gap :40px;
           li {
@@ -236,7 +235,8 @@ $font-size-large: 2rem;
     }
     
     .expenses-container {
-      padding: 1rem;
+      padding: 0.5rem;
+      gap:0.5rem;
       
       .expenses-header {
         justify-content: space-around;
