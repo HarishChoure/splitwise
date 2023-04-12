@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-settle-up-page',
@@ -6,5 +8,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./settle-up-page.component.scss']
 })
 export class SettleUpPageComponent {
+  settleUpForm!: FormGroup;
 
+  constructor(private formBuilder: FormBuilder, private router :Router) { }
+
+  ngOnInit() {
+    this.settleUpForm = this.formBuilder.group({
+      amount: ['', Validators.required],
+      paymentOption: ['online-payment', Validators.required],
+      description: ['']
+    });
+  }
+// Submit button are used to navigate to dashboard
+  onSubmit() {
+    this.router.navigateByUrl('dashboard')
+  }
+//Cancel button used to navigate to dashboard
+  onCancel() {
+    this.router.navigateByUrl('dashboard')
+  }
 }
