@@ -1,0 +1,61 @@
+@import '/src/app/layout/color.scss';
+
+// Define color and font-size variables
+@import '/src/app/layout/variable.scss';
+
+//Table design
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: $font-size-medium;
+  box-shadow: 0px 4px 8px $black;
+  padding: 20px 50px;
+  overflow-x: hidden;
+}
+
+//Table heading and data design
+th, td {
+  border: 1px solid $light-black;
+  padding: 10px;
+  text-align: center;
+}
+
+//Table heading design
+th {
+  background-color: $white;
+}
+
+tr:nth-child(even) {
+  background-color: $light-black;
+}
+
+tr:hover {
+  background-color: $white;
+}
+
+//For table mode
+@media only screen and (max-width: 767px) {
+  table {
+    max-width: 600px;
+    font-size: $font-size-small;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+}
+
+//For mobile mode
+@media only screen and (max-width: 480px) {
+  table {
+    max-width: 400px;
+    font-size: $font-size-tiny;
+  }
+
+  th, td {
+    padding: 3px;
+  }
+}

@@ -1,1 +1,19 @@
-<p>expense-list works!</p>
+<h2>Expense List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Who Paid?</th>
+      <th>You Lent/Borrow</th>
+      <th>Edit Expense</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let expense of expenses; let i = index">
+      <td>{{ expense.name }}</td>
+      <td>{{ expense.paidBy }}</td>
+      <td>{{ expense.lentOrBorrowed }}</td>
+      <td><button (click)="editExpense()"><i class="fa-solid fa-pen-to-square"></i></button></td>
+    </tr>
+  </tbody>
+</table>

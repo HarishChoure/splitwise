@@ -1,6 +1,35 @@
-<p>dashboard works!</p>
-<button (click)="navigateInviteFriend()">Invite Friend</button>
-<button (click)="navigateFriendList()">Friend List</button>
-
-
-
+<!-- Dashboard container -->
+<div class="dashboard-container">
+  <!-- Dashboar header container -->
+  <div class="header-container">
+    <div class="menu-container">
+      <ul>
+        <li class="button-design" *ngFor="let menu of menus">
+          <button (click)="navigate(menu.route)">{{menu.name}}</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <!-- Balance container -->
+    <div class="balance-container">
+      <div class="balance-item">
+        <div class="balance-label">Total Balance</div>
+        <div class="balance-amount">$1{{total_balance}}</div>
+      </div>
+      <div class="balance-item">
+        <div class="balance-label">You Owe</div>
+        <div class="balance-amount">${{you_owe}}</div>
+      </div>
+      <div class="balance-item">
+        <div class="balance-label">You Are Owed</div>
+        <div class="balance-amount">${{your_owe}}</div>
+      </div>
+      <button class="settle-up-button"  (click)="navigateSettleup()">Settle Up</button>
+    </div>
+    <!-- Expense container -->
+    <div class="expenses-container">
+      <div class="expenses-header">
+        <button class="add-expense-button"(click)="navigateTransaction()">Transaction</button>
+        <button class="add-expense-button"(click)="navigateExpense()">Add Expense</button>
+      </div>
+  </div>
