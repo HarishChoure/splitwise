@@ -9,6 +9,7 @@ const routes: Routes = [
     {path:'settle', loadChildren:()=> import('./settle-up-page/settle-up-page.module').then(mod=>mod.SettleUpPageModule)},
     {path:'expense', loadChildren:()=> import('./expense/expense.module').then(mod=>mod.ExpenseModule)},
     {path:'friend', loadChildren:()=> import('./friends/friends.module').then(mod=>mod.FriendsModule)},
+    {path:'transaction', loadChildren:()=> import('./transaction/transaction.module').then(m=>m.TransactionModule)},
     {path:'**',component:ErrorsComponent}
 ];
 
