@@ -200,7 +200,7 @@ $font-size-large: 2rem;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      width:400px;
+      width:360px;
       .logo-container {
         margin-bottom: 1rem;
       }
@@ -208,6 +208,7 @@ $font-size-large: 2rem;
       .menu-container {
         margin-top: 1rem;
         ul {
+          justify-content: space-between;
           flex-wrap: wrap;
           gap :40px;
           li {
