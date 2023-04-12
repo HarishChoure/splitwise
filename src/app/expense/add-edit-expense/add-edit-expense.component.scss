@@ -1,11 +1,6 @@
 @import '/src/app/layout/color.scss';
 // Expense Container design
-
-$font-size-small: 14px;
-$font-size-medium: 16px;
-
-@import '/src/app/layout/color.scss';
-
+@import '/src/app/layout/variable.scss';
 // Expense Container design
 .expense-form-container {
   background-color: $white;

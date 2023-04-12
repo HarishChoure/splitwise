@@ -1,9 +1,7 @@
 @import '/src/app/layout/color.scss';
 
 // Define color and font-size variables
-$font-size-medium: 16px;
-$font-size-small: 14px;
-$font-size-tiny: 12px;
+@import '/src/app/layout/variable.scss';
 
 //Table design
 table {
