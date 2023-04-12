@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -58,5 +59,9 @@ export class DashboardComponent {
 // Navigat rout function
   navigate(route: string) {
     this.router.navigateByUrl(route);
+  }
+  //Navigate to transaction page
+  navigateTransaction(){
+    this.router.navigateByUrl('transaction');
   }
 }
