@@ -1,7 +1,7 @@
 <!-- Group list container -->
 <ng-container
  *ngIf="group_list" >
-<div class="group-listHeading"><h2>Friend List</h2></div>
+<div class="group-listHeading"><h2>Group List</h2></div>
 <!-- Group list -->
 <ul class="group-list">
   <li *ngFor="let name of group_names; let i = index;" class="m10 p10">
@@ -26,7 +26,7 @@
     <h1 class="group-name">{{selected_group_name}}</h1>
     <button type="button" class="cancel-btn" (click)="navigateGroupList()">Cancel</button>
   </div>
-  <!-- Group details table heading container -->
+  <!-- Group list heading container-->
   <div ng-app="">
     <div class="upper-table" ng-controller="membersController">
       <table>
@@ -37,7 +37,7 @@
             <th>Expense</th>
           </tr>
         </thead>
-        <!-- Group details data containaer  -->
+        <!-- Group list data container -->
         <tbody>
           <tr *ngFor="let member of group_detail">
             <td>{{member.member_name}}</td>

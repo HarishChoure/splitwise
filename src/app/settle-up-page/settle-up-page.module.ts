@@ -4,7 +4,7 @@ import { SettleUpPageComponent } from './settle-up-page.component';
 import { RouterModule,Routes } from '@angular/router';
 
 const settleRoutes : Routes = [
-  {path:'settle', component :SettleUpPageComponent},
+  {path:'', component :SettleUpPageComponent},
  
 ]
 @NgModule({

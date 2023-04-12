@@ -1,1 +1,82 @@
-<p>add-edit-expense works!</p>
+<div class ="expense-form-container">
+  <!-- Expense form container -->
+  <h2>Expense Form</h2>
+<form [formGroup]="expenseForm"  (ngSubmit)="navigateDashboard()">
+  <!-- Expense name container -->
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" required>
+    <div *ngIf="expenseForm.get('name')?.invalid && expenseForm.get('name')?.touched" class="error-msg">
+      Name is required
+    </div>
+  </div>
+<!-- Expense amount container -->
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" formControlName="amount" step="0.01" required>
+    <div *ngIf="expenseForm.get('amount')?.invalid && expenseForm.get('amount')?.touched" class="error-msg">
+      Amount is required
+    </div>
+  </div>
+<!-- Expense currency container -->
+<div *ngFor="let currency of currencies" class="form-group">
+  <label for="{{currency.value}}">{{currency.label}}</label>
+  <select id="{{currency.value}}" formControlName="{{currency.value}}">
+    <option value="{{currency.value}}">{{currency.label}}</option>
+  </select>
+</div>
+
+<!-- Expense date container -->
+  <div class="form-group">
+    <label for="date">Date</label>
+    <input type="date" id="date" formControlName="date" required>
+    <div *ngIf="expenseForm.get('date')?.invalid && expenseForm.get('date')?.touched" class="error-msg">
+      Date is required
+    </div>
+  </div>
+<!-- Expense notes container -->
+  <div class="form-group">
+    <label for="notes">Notes</label>
+    <textarea id="notes" formControlName="notes"></textarea>
+  </div>
+<!-- Expense group container -->
+  <div class="form-group">
+    <label for="group">Group</label>
+    <input type="text" id="group" formControlName="group">
+  </div>
+<!-- Expense paid by container -->
+  <div class="form-group">
+    <label for="paidBy">Paid By</label>
+    <select id="paidBy" formControlName="paidBy">
+      <option *ngFor="let participant of participants" [value]="participant">{{ participant }}</option>
+    </select>
+  </div>
+<!-- Expense particpants container -->
+  <div class="form-group">
+    <label for="participants">Participants</label>
+    <select id="participants" formControlName="participants" multiple>
+      <option *ngFor="let participant of participants" [value]="participant">{{ participant }}</option>
+    </select>
+  </div>
+<!-- Expense split container -->
+  <div class="form-group">
+    <label for="split">Split</label>
+    <div class="split-options">
+      <label>
+        <input type="radio" formControlName="split" value="amount" checked> Amount
+      </label>
+
+      <label>
+        <input type="radio" formControlName="split" value="equally"> Equally
+      </label>
+
+      <label>
+        <input type="radio" formControlName="split" value="percentage"> Percentage
+      </label>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="expenseForm.invalid">Add Expense</button>
+</form>
+
+</div>

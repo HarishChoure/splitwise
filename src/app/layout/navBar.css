@@ -1,0 +1,75 @@
+.nav-header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  border: none;
+  background-color: #f7f7f7;
+  overflow-x: hidden;
+}
+.nav-header .nav-img {
+  margin: 10px 16px;
+  height: 60px;
+}
+.nav-header .log-sign {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.nav-header .log-sign .nav-log {
+  color: #ffffff;
+}
+.nav-header .log-sign .nav-log button {
+  color: #ffffff;
+  padding: 16px;
+  background-color: #1CC29F;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.nav-header .log-sign .nav-log button:hover {
+  background-color: #f7f7f7;
+  color: #1CC29F;
+}
+.nav-header .log-sign .nav-signUP {
+  color: #ffffff;
+}
+.nav-header .log-sign .nav-signUP button {
+  margin-right: 16px;
+  color: #ffffff;
+  padding: 16px;
+  background-color: #1CC29F;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.nav-header .log-sign .nav-signUP button:hover {
+  background-color: #f7f7f7;
+  color: #1CC29F;
+}
+
+@media (max-width: 767px) {
+  .nav-header {
+    height: 60px;
+  }
+  .nav-header .nav-img {
+    margin-left: 16px;
+    height: 45px;
+  }
+}
+@media (max-width: 480px) {
+  .nav-header {
+    height: 40px;
+  }
+  .nav-header .nav-img {
+    margin-left: 14px;
+    height: 30px;
+  }
+  .nav-header button {
+    margin-right: 16px;
+    padding: 14px;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=navBar.css.map */
