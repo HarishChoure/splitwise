@@ -1,140 +1,86 @@
 @import "/src/app/layout/color.scss";
-
-// Invite form page design
-.invite-form {
-  width: 400px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: $light-blue;
-  border-radius: 10px;
-  box-shadow: 0px 5px 10px $black;
-
-  // Invite form heading
-  h2 {
-    text-align: center;
-    margin-bottom: 30px;
+//Invite friend container design
+.container-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px $black;
+  padding: 20px 50px;
+  //Invite friend div design
+  .friend-div {
+    font-size: xx-large;
+    margin-bottom:20px;
   }
-
-  // Input-field container design
-  .input-field {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
-
-    // Label design
-    label {
-      width: 100px;
-      font-weight: bold;
-    }
-
-    // Input field design
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      flex: 1;
-      padding: 10px 8px;
-      border: none;
-      border-radius: 5px;
-      box-shadow: 0px 0px 5px;
-    }
-
-    // Text area design
-    textarea {
-      height: 100px;
-    }
-  }
-
-  // Warning message design
-  .warning-message {
-    display: flex;
-    color: $warning;
-    margin-bottom: 15px;
-    margin-left: 100px;
-  }
-
-  // Button design
-  .button-design {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-
-    button {
-      display: block;
-      margin: 0 ;
-      padding: 10px 15px;
-      background-color: $green;
-      color: $white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: $white;
-      color: $green;
-    }
-  }
-
-  // Responsive styles for tablet
-  @media screen and (max-width: 768px) {
+  //Invite friend field design
+  input[type="email"],
+  input[type="password"] ,
+  textarea{
     width: 100%;
-    padding: 20px;
-
-    .input-field {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 15px;
-
-      label {
-        width: 100%;
-        margin-bottom: 5px;
-      }
-
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        width: 90%;
-        margin-bottom: 10px;
-      }
-    }
-
-    .warning-message {
-      margin-left: 0;
-      justify-content: center;
-    }
-
-    button {
-      width: 100%;
-    }
+    padding: 12px 20px 10px;
+    margin: 20px 0 10px;
+    display: inline-block;
+    border: 1px solid $light-black;
+    box-sizing: border-box;
+  }
+  //Invite friend message design
+  .warning {
+    color: $warning;
+    margin-bottom: 10px;
+  }
+}
+//For tablet mode
+@media only screen and (max-width: 768px) {
+  .container-form {
+    width: 300px;
   }
 
-  // Responsive styles for mobile
-  @media screen and (max-width: 480px) {
+  input[type="email"],
+  input[type="password"]
+  {
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 4px 0;
+  }
+}
+//For mobile mode
+@media only screen and (max-width: 480px) {
+  .container-form {
+    width: 200px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    margin: 5px 0;
+    padding: 10px 15px;
+  }
+
+  button {
+    margin: 2px 0;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+//Button Design
+.button-design{
+  display: flex;
+  justify-content: space-between;
+  button {
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
     padding: 10px;
-
-    .input-field {
-      flex-direction: column;
-      align-items: center;
-
-      label {
-        width: 80%;
-        margin-bottom: 5px;
-      }
-
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        width: 70%;
-        margin-bottom: 10px;
-      }
-    }
-
-    button {
-      font-size: 10px;
-      gap:5px;
-      padding: 2px;
+    margin: 8px 8px 0 0;
+    color: $white;
+    background-color: $green;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

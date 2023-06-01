@@ -17,4 +17,8 @@ deleteName(index: number) {
 navigateEditFriend(){
   this.router.navigateByUrl('friend/friend-edit')
 }
+//This function are used to navigate dashboard
+navigateDashboard(){
+  this.router.navigateByUrl('dashboard')
+}
 }

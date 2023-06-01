@@ -7,7 +7,6 @@
   border-radius: 15px;
   box-shadow: 0px 4px 8px $black;
   padding: 20px 50px;
-  overflow-x: hidden;
   //Login div design
   .login-div {
     font-size: xx-large;
@@ -20,7 +19,7 @@
     padding: 12px 20px 10px;
     margin: 20px 0 10px;
     display: inline-block;
-    border: 1px solid $light-gray;
+    border: 1px solid $light-black;
     box-sizing: border-box;
   }
   //Warning message design

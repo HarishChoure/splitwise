@@ -1,34 +1,33 @@
-<!-- Invite friend form design -->
-<div class="invite-form">
-  <!-- Invite form heading -->
-  <h2>Invite Friend</h2>
-  <!-- Invite form container -->
+<div class="container-form">
+  <div class="friend-div">Invite Friend</div>
   <form [formGroup]="inviteForm" (ngSubmit)="navigateDashboard()">
-      <!-- Invite friend name -->
-    <div class="input-field">
-      <label for="uname">Name:</label>
-      <input type="text" placeholder="Enter Name" formControlName="invite_name" id="uname" required>
-    </div>
-    <div class="warning-message" *ngIf="inviteForm.get('invite_name')?.invalid && inviteForm.get('invite_name')?.touched">
-      Name is required
-    </div>
-    <!-- Invite friend email -->
-    <div class="input-field">
-      <label for="email">Email:</label>
+    <!-- Email address and password container -->
+    <div>
+      <!-- Password conatiner -->
+      <label for="uname">Name</label>
+      <input type="password" placeholder="Enter Name" formControlName="invite_name" id="uname" required>
+      <div *ngIf="inviteForm.get('invite_name')?.invalid && inviteForm.get('invite_name')?.touched" class="warning">
+        Name is required
+      </div>
+      <!-- Email address container -->
+      <label for="email" class="label-design">Email Address</label>
       <input type="email" placeholder="Enter Email Address" formControlName="invite_email" id="eamil" required>
-    </div>
-    <div class="warning-message" *ngIf="inviteForm.get('invite_email')?.invalid && inviteForm.get('invite_email')?.touched">
-      Email address is required
-    </div>
-    <!-- Invite friend textarea-->
-    <div class="input-field">
+      <div *ngIf="inviteForm.get('invite_email')?.invalid && inviteForm.get('invite_email')?.touched" class="warning">
+        Email address is required
+      </div>
+      <!-- Textarea -->
       <label for="message">Message:</label>
       <textarea id="message" name="message" formGroupName="discription" placeholder="Discription"></textarea>
+
     </div>
-    <!-- Invite friend button -->
+    <!-- Button container -->
     <div class="button-design">
-      <button [disabled]="inviteForm.invalid"type="submit">Send Invite</button>
-      <button type="submit">Cancel Invite</button>
+      <div>
+        <button type="submit">Cancel</button>
+      </div>
+      <div>
+        <button [disabled]="inviteForm.invalid" type="submit">Send Invite</button>
+      </div>
     </div>
   </form>
 </div>

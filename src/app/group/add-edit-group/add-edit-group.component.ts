@@ -10,9 +10,7 @@ import { Router } from '@angular/router';
 export class AddEditGroupComponent implements OnInit {
   groupForm!: FormGroup;
   members!: FormArray;
-
   constructor(private formBuilder: FormBuilder, private router :Router) { }
-
   ngOnInit(): void {
     this.groupForm = this.formBuilder.group({
       groupName: ['', Validators.required],
@@ -24,7 +22,6 @@ export class AddEditGroupComponent implements OnInit {
     });
     this.members = this.groupForm.get('members') as FormArray;
   }
-
   // Create member form
   createMember(): FormGroup {
     return this.formBuilder.group({
@@ -32,30 +29,26 @@ export class AddEditGroupComponent implements OnInit {
       memberEmail: ['', [Validators.required, Validators.email]]
     });
   }
-
   // Add member
   addMember() {
     this.members.push(this.createMember());
   }
-
   // Delete member
   deleteMember(index: number): void {
     this.members.removeAt(index);
   }
-
   // Save group
   save() {
     console.log(this.groupForm.value);
     // Implement the save functionality here
   }
-
   // Invite friend
   invite() {
     console.log('Invite friend functionality');
     // Implement the invite friend functionality here
   }
-
   navigateToDashboard() {
     this.router.navigateByUrl('dashboard');
   }
 }
+ 
