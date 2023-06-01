@@ -14,8 +14,10 @@ export class SettleUpPageComponent {
 
   ngOnInit() {
     this.settleUpForm = this.formBuilder.group({
+      payer: ['',Validators.required],
+      reciver:['',Validators.required],
       amount: ['', Validators.required],
-      paymentOption: ['online-payment', Validators.required],
+      paymentOption: ['', Validators.required],
       description: ['']
     });
   }

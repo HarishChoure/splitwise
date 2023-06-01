@@ -5,7 +5,10 @@
       <div class="form-group">
           <label for="groupName">Group Name</label>
           <input type="text" id="groupName" formControlName="groupName" required>
-      </div>    
+          <div *ngIf="groupForm.get('groupName')?.invalid && groupForm.get('groupName')?.touched" class="warning">
+            Group name is required
+          </div>  
+      </div>
        <!--Group type select container  -->
       <div class="form-group">
           <label for="groupType">Group Type</label>
@@ -15,7 +18,8 @@
               <option value="Couple">Couple</option>
               <option value="Other">Other</option>
           </select>
-      </div>   
+      </div>  
+      <button type="button" class="add-btn" (click)="addMember()">Add Member</button>  
       <!-- Add member container -->
       <div formArrayName="members">
           <div *ngFor="let member of members.controls; let i = index" class="form-row">
@@ -27,8 +31,9 @@
                   <label for="memberEmail{{i}}">Member Email</label>
                   <input type="email" id="memberEmail{{i}}" formControlName="memberEmail{{i}}" required>
               </div>    
+              <!-- Delete button -->
               <button type="button" class="delete-btn p5" (click)="deleteMember(i)">
-                  <i class="fa-solid fa-user-xmark"></i>
+                <i class="fa-sharp fa-solid fa-trash"></i>
               </button>
           </div>
       </div>  
@@ -37,9 +42,16 @@
           <label for="settleUpPayment">Settle Up Payment</label>
           <input type="checkbox" id="settleUpPayment" formControlName="settleUpPayment">
       </div>
-      <!-- Add member button -->
-      <button type="button" class="add-btn" (click)="addMember()">Add Member</button>   
+
+        
       <!-- Save group button  -->
-      <button type="submit" class="save-btn" (click)="save()">Save</button>
+      <div class="button-container">
+        <div>
+            <button type="submit" class="cancel-btn">Cancel</button>
+        </div>
+        <div>
+            <button [disabled]="groupForm.valid" type="submit" class="save-btn" (click)="save()">Save</button>
+        </div>
+      </div>
   </form>
 </div>

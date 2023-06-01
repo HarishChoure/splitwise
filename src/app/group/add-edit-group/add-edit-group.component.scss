@@ -1,7 +1,6 @@
-@import '/src/app/layout/color.scss';
-
-//Common button design 
-@mixin button-design{
+@import "/src/app/layout/color.scss";
+//Common button design
+@mixin button-design {
     background-color: $green;
     color: $white;
     border: none;
@@ -10,11 +9,9 @@
     margin-right: $form-padding;
     cursor: pointer;
 }
-
 $form-padding: 10px;
-
 //Form container design
-.form-container{
+.form-container {
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -22,35 +19,31 @@ $form-padding: 10px;
     box-shadow: 0px 4px 8px $black;
     padding: 20px 50px;
     overflow-x: hidden;
-
-    p{
+    p {
         font-size: xx-large;
         margin-bottom: 10px;
     }
 }
-
 //Form group design
 .form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: $form-padding;
 
-    //Label design 
+    //Label design
     label {
         font-size: large;
         margin-bottom: $form-padding;
     }
-
-    //Input field design 
+    //Input field design
     input,
     select {
         padding: $form-padding;
         border-radius: 5px;
-        border: 1px solid $light-gray;
+        border: 1px solid $light-black;
     }
 }
-
-//Form row design 
+//Form row design
 .form-row {
     display: flex;
     flex-direction: row;
@@ -61,7 +54,7 @@ $form-padding: 10px;
         margin-right: $form-padding;
     }
 
-    //Delete button design 
+    //Delete button design
     .delete-btn {
         background-color: $white;
         border: none;
@@ -70,8 +63,7 @@ $form-padding: 10px;
         cursor: pointer;
     }
 }
-
-//Settle up container design 
+//Settle up container design
 .settle-up {
     display: flex;
     flex-direction: row;
@@ -96,21 +88,31 @@ $form-padding: 10px;
         }
     }
 }
-
-//Add button design 
-.add-btn{
+    //Add button design
+.add-btn {
     @include button-design;
+    margin-bottom: 10px;
 }
-
-//Save button design
-.save-btn{
-    @include button-design;
-    background-color: $green;
+//Button-desing
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    //Save button design
+    .save-btn {
+        @include button-design;
+        background-color: $green;
+    }
+    //Cancel button-design
+    .cancel-btn {
+        @include button-design;
+        background-color: $green;
+    }
 }
 
 //Save, add, delete hover design
 .add-btn:hover,
 .save-btn:hover,
+.cancel-btn:hover,
 .delete-btn:hover {
     background-color: $white;
     color: $green;
@@ -124,12 +126,12 @@ $form-padding: 10px;
 
 //Responsive for table and mobile mode both
 @media only screen and (max-width: 768px) {
-    .form-container{
+    .form-container {
         width: 100%;
         padding: 20px;
     }
 
-    .form-row{
+    .form-row {
         flex-direction: column;
 
         .form-group {
@@ -140,6 +142,7 @@ $form-padding: 10px;
 
     .add-btn,
     .save-btn,
+    .cancel-btn,
     .delete-btn {
         width: 100%;
         margin-right: 0;

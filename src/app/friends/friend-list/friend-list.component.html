@@ -1,16 +1,25 @@
 <!-- Friend list container -->
-<div class="friend-listHeading"><h2>Friend List</h2></div>
-<!-- Friend list -->
-<ul class="friend-list">
-  <li *ngFor="let name of names; let i = index;" class="m10 p10">
-    <!-- Friend  name -->
-    <div>{{ name }}</div>
-    <div class="button-container">
-      <!-- Delete friend button -->
-      <button class="delete-btn p10 m10" (click)="deleteName(i)"><i class="fa-solid fa-user-minus"></i></button>
-      <!-- Edit friend button -->
-      <button class="edit-btn p10 m10" (click)="navigateEditFriend()"><i class="fa-solid fa-user-pen"></i></button>
-    </div>
-  </li>
-</ul>
+<div class="friend-list">
+  <h2>Friend List</h2>
+<table>
+  <!-- Friend List container heading -->
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Delete</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <!-- Friend list body container -->
+  <tbody>
+    <tr *ngFor="let name of names let i = index;">
+      <td>{{ name}}</td>
+      <td><button class="delete-btn p10 m10" (click)="deleteName(i)"><i class="fa-sharp fa-solid fa-trash"></i></button></td>
+      <td><button class="edit-btn p10 m10" (click)="navigateEditFriend()"><i class="fas fa-edit"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Friend list button container -->
+<button type="button" class="back-btn" (click)="navigateDashboard()">Back</button>
+</div>
 

@@ -44,5 +44,7 @@ export class GroupListComponent {
     this.group_list = true;
     this.router.navigateByUrl('group/group-list');
   }
-
+  navigateDashboard(){
+    this.router.navigateByUrl('dashboard')
+  }
 }

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AddEditFriendsComponent {
   constructor(private router : Router){}
+  //Inviter form desing
   inviteForm!: FormGroup;
   ngOnInit(): void {
     this.inviteForm = new FormGroup({

@@ -1,52 +1,55 @@
 <!-- Group list container -->
 <ng-container
  *ngIf="group_list" >
-<div class="group-listHeading"><h2>Group List</h2></div>
-<!-- Group list -->
-<ul class="group-list">
-  <li *ngFor="let name of group_names; let i = index;" class="m10 p10">
-    <!-- Group name  name -->
-    <div>{{ name }}</div>
-    <div class="button-container">
-      <!-- Delete group button -->
-      <button class="delete-btn p10 m10" (click)="deleteName(i)"><i class="fa-solid fa-user-minus"></i></button>
-      <!-- Navigate group details button -->
-       <button class="grp-detail-btn p10 m10" (click)="navigateGroupDetails(i)"><i class="fa-solid fa-circle-info"></i></button>
-    </div>
-  </li>
-</ul>
+<!-- Group list container -->
+<div class="group-list">
+  <h2>Group List</h2>
+<table>
+  <!-- Group List container heading -->
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Delete</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <!-- Group list body container -->
+  <tbody>
+    <tr *ngFor="let name of group_names let i = index;">
+      <td>{{ name}}</td>
+      <td><button class="delete-btn p10 m10" (click)="deleteName(i)"><i class="fa-sharp fa-solid fa-trash"></i></button></td>
+      <td>  <button class="grp-detail-btn p10 m10" (click)="navigateGroupDetails(i)"><i class="fa-solid fa-circle-info"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+<!-- group list back button -->
+<button type="button" class="back-btn" (click)="navigateDashboard()">Back</button>
+</div>
 </ng-container>
-
 <!-- Group details container -->
 <ng-container
  *ngIf="group_details" >
-<div class="group-detail">
-   <!-- Group heading container and cance button container -->
-  <div class="group-heading">
-    <h1 class="group-name">{{selected_group_name}}</h1>
-    <button type="button" class="cancel-btn" (click)="navigateGroupList()">Cancel</button>
-  </div>
-  <!-- Group list heading container-->
-  <div ng-app="">
-    <div class="upper-table" ng-controller="membersController">
-      <table>
-        <thead>
-          <tr>
-            <th>Member Name</th>
-            <th>Transaction</th>
-            <th>Expense</th>
-          </tr>
-        </thead>
-        <!-- Group list data container -->
-        <tbody>
-          <tr *ngFor="let member of group_detail">
-            <td>{{member.member_name}}</td>
-            <td>{{member.transaction}}</td>
-            <td>{{member.expense}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+ <div class="group-list">
+  <h2>{{selected_group_name}}</h2>
+<table>
+  <!-- Group List container heading -->
+  <thead>
+    <tr>
+      <th>Member Name</th>
+      <th>Transaction</th>
+      <th>Expense</th>
+    </tr>
+  </thead>
+  <!-- Group list body container -->
+  <tbody>
+    <tr *ngFor="let member of group_detail">
+      <td>{{member.member_name}}</td>
+      <td>{{member.transaction}}</td>
+      <td>{{member.expense}}</td>
+    </tr>
+  </tbody>
+</table>
+<button type="button" class="back-btn" (click)="navigateGroupList()">Back</button>
 </div>
 </ng-container>
+

@@ -3,6 +3,26 @@
     <!-- Settle up heading -->
     <h2 class="title">Settle Up</h2>
     <form [formGroup]="settleUpForm" (ngSubmit)="onSubmit()">
+      <!--Payer container  -->
+      <div class="form-group">
+        <label for="payer">Payer:</label>
+        <select id="payer" name="payer"formControlName="payer">
+          <option value="you">You</option>
+        </select>
+        
+      </div>
+      <!-- Reciver container -->
+      <div class="form-group">
+        <label for="reciver">Reciver:</label>
+        <select id="reciver" formControlName="reciver">
+          <option value="default">-----</option>
+          <option value="harry">Harry</option>
+          <option value="carry">Carry</option>
+        </select>
+        <div *ngIf="settleUpForm.get('reciver')?.invalid && (settleUpForm.get('reciver')?.dirty || settleUpForm.get('reciver')?.touched)" class="error">
+        Reciver is required.
+        </div>
+      </div>
       <div class="form-group">
         <!-- Amount container -->
         <label for="amount">Amount:</label>
@@ -13,8 +33,8 @@
       </div>
       <!-- Payment container -->
       <div class="form-group">
-        <label for="payment-option">Payment option:</label>
-        <select id="payment-option" formControlName="paymentOption">
+        <label for="paymentOption">Payment option:</label>
+        <select id="paymentOption" formControlName="paymentOption">
           <option value="online-payment">Online Payment</option>
           <option value="cash">Cash</option>
         </select>

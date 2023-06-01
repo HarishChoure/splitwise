@@ -19,4 +19,7 @@ export class ExpenseListComponent {
   editExpense(){
     this.router.navigateByUrl('expense/expense-edit')
   }
+  navigateDashboard(){
+    this.router.navigateByUrl('dashboard')
+  }
 }

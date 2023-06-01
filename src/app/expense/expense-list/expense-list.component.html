@@ -1,5 +1,8 @@
-<h2>Expense List</h2>
+<!-- Expesne list container -->
+<div class="friend-list">
+  <h2>Expense List</h2>
 <table>
+  <!-- Expense List container heading -->
   <thead>
     <tr>
       <th>Name</th>
@@ -8,6 +11,7 @@
       <th>Edit Expense</th>
     </tr>
   </thead>
+  <!-- Expense list body container -->
   <tbody>
     <tr *ngFor="let expense of expenses; let i = index">
       <td>{{ expense.name }}</td>
@@ -17,3 +21,7 @@
     </tr>
   </tbody>
 </table>
+<button type="button" class="back-btn" (click)="navigateDashboard()">Back</button>
+</div>
+
+
